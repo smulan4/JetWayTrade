@@ -1,0 +1,10 @@
+name: JetWayTrade
+version: '${project.version}'
+main: se.jetway.jetwaytrade.JetWayTrade
+api-version: '1.20'
+authors: [smulan4]
+description: Player-to-player transactions in your Minecraft server. This graphical user interface (GUI) plugin provides a seamless and secure platform for players to engage in trades, ensuring a trustworthy and efficient trading experience.
+website: jetway.se
+commands:
+  trade:
+    description: test
