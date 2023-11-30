@@ -6,6 +6,7 @@ public interface SubCommand {
 
     /**
      * Method which executes when Player uses the Command.
+     *
      * @param commandSender The sender of the Command.
      * @param args List of arguments.
      */

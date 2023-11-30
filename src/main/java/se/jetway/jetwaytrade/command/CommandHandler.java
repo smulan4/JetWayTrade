@@ -51,16 +51,24 @@ public class CommandHandler implements CommandExecutor, TabExecutor {
         return null;
     }
 
+    /**
+     * Displays a message with available subcommands and their descriptions.
+     *
+     * @param commandSender Sender that will receive the message.
+     */
     private void displayHelp(CommandSender commandSender) {
-        String commandName = "";
-        String description = "";
         for (CommandInfo commandInfo : commandRegistry.getCommandInfoList()) {
-            commandName = commandInfo.commandName();
-            description = commandInfo.description();
+            String commandName = commandInfo.commandName();
+            String description = commandInfo.description();
             commandSender.sendMessage("/" + commandName + " - " + description);
         }
     }
 
+    /**
+     * Sends a message to the CommandSender when the subcommand is not recognisable.
+     *
+     * @param commandSender Sender that will receive the message.
+     */
     private void unknownSubCommand(CommandSender commandSender) {
         commandSender.sendMessage("Unknown Subcommand");
     }

@@ -17,6 +17,7 @@ public class CommandRegistry {
 
     /**
      * Adds SubCommand to HashMap of SubCommands with value as the CommandName.
+     *
      * @param subCommand SubCommand that gets added to the Map of SubCommands.
      */
     public void registerSubCommand(SubCommand subCommand) {
@@ -32,6 +33,7 @@ public class CommandRegistry {
 
     /**
      * Returns SubCommand from its CommandName.
+     *
      * @param commandName of the SubCommand.
      * @return the SubCommand.
      */
@@ -41,6 +43,7 @@ public class CommandRegistry {
 
     /**
      * Returns list of the key elements from the SubCommand Map.
+     *
      * @return ArrayList of keys.
      */
     public List<String> getSubCommandNames() {
@@ -49,6 +52,7 @@ public class CommandRegistry {
 
     /**
      * Returns List of values from the CommandInfo list.
+     *
      * @return ArrayList of values.
      */
     public List<CommandInfo> getCommandInfoList() {
