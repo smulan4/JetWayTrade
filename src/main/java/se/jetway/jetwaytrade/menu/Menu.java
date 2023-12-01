@@ -26,7 +26,7 @@ public abstract class Menu implements InventoryHolder {
      */
     public Menu(String title, int rows) {
         this.title = title;
-        this.rows = rows * 9;
+        this.rows = rows;
 
         inventory = Bukkit.createInventory(this, rows, TextUtils.color(title));
         decorateMenu(inventory);
