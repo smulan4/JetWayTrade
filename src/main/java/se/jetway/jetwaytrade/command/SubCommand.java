@@ -2,6 +2,9 @@ package se.jetway.jetwaytrade.command;
 
 import org.bukkit.command.CommandSender;
 
+/**
+ * Requires CommandInfo Annotation.
+ */
 public interface SubCommand {
 
     /**
