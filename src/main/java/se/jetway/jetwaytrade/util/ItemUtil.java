@@ -1,4 +1,4 @@
-package se.jetway.jetwaytrade.utils;
+package se.jetway.jetwaytrade.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -15,7 +15,12 @@ import java.util.stream.Collectors;
 /**
  * Utility class for creating and manipulating ItemStacks.
  */
-public class ItemUtils {
+public final class ItemUtil {
+
+    /**
+     * Private constructor to prevent instantiation
+     */
+    private ItemUtil() {}
 
     /**
      * Creates an ItemStack with the specified properties.
@@ -35,11 +40,11 @@ public class ItemUtils {
         }
 
         amount = amount <= 0 ? 1 : amount;
-        lore = lore != null ? lore.stream().map(TextUtils::color).collect(Collectors.toList()) : null;
+        lore = lore != null ? lore.stream().map(TextUtil::color).collect(Collectors.toList()) : null;
 
         ItemStack itemStack = new ItemStack(material, amount);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName(TextUtils.color(title));
+        itemMeta.setDisplayName(TextUtil.color(title));
 
         if (lore != null && !lore.isEmpty()) {
             itemMeta.setLore(lore);
