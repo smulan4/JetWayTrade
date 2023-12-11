@@ -1,6 +1,9 @@
 package se.jetway.jetwaytrade.util;
 
-import org.bukkit.ChatColor;
+import com.google.common.util.concurrent.AtomicDouble;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 
 /**
  * Utility class for handling text-related operations.
@@ -12,14 +15,10 @@ public final class TextUtil {
      */
     private TextUtil() {}
 
-    /**
-     * Translates color codes in a text string using ChatColor.
-     *
-     * @param text The input text containing color codes.
-     * @return The text with color codes translated.
-     */
-    public static String color(String text) {
-        return ChatColor.translateAlternateColorCodes('&', text);
+    // TODO Hex
+    public static Component colorComponent(Component component) {
+        String test = PlainTextComponentSerializer.plainText().serialize(component);
+        return MiniMessage.miniMessage().deserialize(test).asComponent();
     }
 
     /**
